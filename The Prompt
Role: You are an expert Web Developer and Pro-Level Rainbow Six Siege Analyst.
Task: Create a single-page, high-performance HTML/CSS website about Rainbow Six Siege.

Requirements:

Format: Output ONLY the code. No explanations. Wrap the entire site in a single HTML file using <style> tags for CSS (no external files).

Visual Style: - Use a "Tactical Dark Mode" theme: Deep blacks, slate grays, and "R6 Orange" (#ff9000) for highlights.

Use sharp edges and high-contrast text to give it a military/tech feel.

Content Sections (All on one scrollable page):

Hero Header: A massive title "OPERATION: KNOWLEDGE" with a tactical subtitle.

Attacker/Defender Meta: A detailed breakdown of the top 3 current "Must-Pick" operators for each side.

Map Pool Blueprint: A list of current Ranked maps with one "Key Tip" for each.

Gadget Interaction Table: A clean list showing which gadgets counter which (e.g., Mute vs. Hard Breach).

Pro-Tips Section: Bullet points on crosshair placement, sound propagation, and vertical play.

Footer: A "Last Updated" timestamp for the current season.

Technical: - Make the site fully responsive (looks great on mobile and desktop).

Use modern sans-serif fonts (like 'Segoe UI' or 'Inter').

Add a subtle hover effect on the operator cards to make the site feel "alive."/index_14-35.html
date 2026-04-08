@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation: Knowledge | R6 Tactical Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0a0e27; color: #e2e8f0; font-family: 'Inter', sans-serif; }
+        .accent-border { border-left: 4px solid #ff9000; }
+        .card-bg { background-color: #1a1f3a; }
+        .hover-glow:hover { box-shadow: 0 0 15px rgba(255, 144, 0, 0.3); transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="text-slate-200">
+
+    <header class="h-screen flex flex-col justify-center items-center text-center p-6 bg-slate-900 border-b border-orange-600">
+        <h1 class="text-6xl md:text-8xl font-black text-white mb-4 tracking-tighter italic uppercase">OPERATION: <span class="text-orange-500">KNOWLEDGE</span></h1>
+        <p class="text-xl text-slate-400 uppercase tracking-widest">Season: Heavy Mettle Tactical Briefing</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16 space-y-24">
+        
+        <section>
+            <h2 class="text-3xl font-bold mb-8 uppercase border-b-2 border-orange-500 inline-block">Attacker Meta</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card-bg p-6 border border-slate-700 hover-glow">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=400" class="w-full h-32 object-cover mb-4 grayscale" alt="Operator">
+                    <h3 class="text-xl font-bold text-orange-500">Ace</h3>
+                    <p class="text-sm mt-2">Gadget: S.E.L.M.A. Breacher | Win-Rate: 54%</p>
+                    <p class="text-slate-400 mt-2 text-sm italic">High-efficiency hard breach, excels on vertical maps.</p>
+                </div>
+                <div class="card-bg p-6 border border-slate-700 hover-glow">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=400" class="w-full h-32 object-cover mb-4 grayscale" alt="Operator">
+                    <h3 class="text-xl font-bold text-orange-500">Iana</h3>
+                    <p class="text-sm mt-2">Gadget: Gemini Replicator | Win-Rate: 52%</p>
+                    <p class="text-slate-400 mt-2 text-sm italic">Infinite intel gathering without operator risk.</p>
+                </div>
+                <div class="card-bg p-6 border border-slate-700 hover-glow">
+                    <img src="https://images.unsplash.com/photo-1596495577886-d926f1a81232?auto=format&fit=crop&q=80&w=400" class="w-full h-32 object-cover mb-4 grayscale" alt="Operator">
+                    <h3 class="text-xl font-bold text-orange-500">Buck</h3>
+                    <p class="text-sm mt-2">Gadget: Skeleton Key | Win-Rate: 51%</p>
+                    <p class="text-slate-400 mt-2 text-sm italic">Master of vertical pressure and site demolition.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold mb-8 uppercase border-b-2 border-orange-500 inline-block">Defender Meta</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card-bg p-6 border border-slate-700 hover-glow">
+                    <h3 class="text-xl font-bold text-orange-500">Azami</h3>
+                    <p class="text-sm mt-2">Gadget: Kiba Barrier | Win-Rate: 56%</p>
+                    <p class="text-slate-400 mt-2 text-sm italic">Dynamic site reconstruction and sightline denial.</p>
+                </div>
+                <div class="card-bg p-6 border border-slate-700 hover-glow">
+                    <h3 class="text-xl font-bold text-orange-500">Solis</h3>
+                    <p class="text-sm mt-2">Gadget: SPEC-IO Sensor | Win-Rate: 54%</p>
+                    <p class="text-slate-400 mt-2 text-sm italic">The ultimate anti-flank and utility denial tool.</p>
+                </div>
+                <div class="card-bg p-6 border border-slate-700 hover-glow">
+                    <h3 class="text-xl font-bold text-orange-500">Mira</h3>
+                    <p class="text-sm mt-2">Gadget: Black Mirror | Win-Rate: 53%</p>
+                    <p class="text-slate-400 mt-2 text-sm italic">Essential for site control on basement objectives.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Map Pool Blueprints</h2>
+                <div class="space-y-4">
+                    <div class="accent-border pl-4 bg-slate-900 p-3"><strong>Clubhouse:</strong> Prioritize CCTV/Cash wall control early.</div>
+                    <div class="accent-border pl-4 bg-slate-900 p-3"><strong>Oregon:</strong> Focus on attic rotations and basement hold.</div>
+                    <div class="accent-border pl-4 bg-slate-900 p-3"><strong>Chalet:</strong> Garage requires dedicated hard-breach support.</div>
+                    <div class="accent-border pl-4 bg-slate-900 p-3"><strong>Kafe:</strong> Skylight control dictates the tempo of the round.</div>
+                    <div class="accent-border pl-4 bg-slate-900 p-3"><strong>Bank:</strong> Vertical play from floor is key for locker hold.</div>
+                    <div class="accent-border pl-4 bg-slate-900 p-3"><strong>Border:</strong> Armory wall is the primary defensive liability.</div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Gadget Counters</h2>
+                <table class="w-full text-left border-collapse">
+                    <thead><tr class="text-orange-500 uppercase text-sm border-b border-slate-700"><th class="py-2">Gadget</th><th class="py-2">Counter</th></tr></thead>
+                    <tbody>
+                        <tr class="border-b border-slate-800"><td class="py-3">Mute</td><td class="py-3 text-slate-400">Twitch / Brava</td></tr>
+                        <tr class="border-b border-slate-800"><td class="py-3">Thermite</td><td class="py-3 text-slate-400">Bandit / Kaid</td></tr>
+                        <tr class="border-b border-slate-800"><td class="py-3">Goyo</td><td class="py-3 text-slate-400">Kali / Explosives</td></tr>
+                        <tr class="border-b border-slate-800"><td class="py-3">Castle</td><td class="py-3 text-slate-400">Sledge / Ash / Finka</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="bg-slate-900 p-8 border-l-4 border-orange-600">
+            <h2 class="text-3xl font-bold mb-6">Tactical Pro-Tips</h2>
+            <div class="space-y-6">
+                <div>
+                    <h4 class="font-bold text-orange-500 text-lg">Crosshair Placement</h4>
+                    <p class="text-slate-300 text-sm">Always maintain reticle at head height relative to common holding angles. Minimizing vertical movement during engagement reduces reaction time.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-orange-500 text-lg">Sound Propagation</h4>
+                    <p class="text-slate-300 text-sm">Siege audio travels through the shortest opening. Use rotation holes and floor destruction to manipulate enemy information gathering.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-orange-500 text-lg">Vertical Play</h4>
+                    <p class="text-slate-300 text-sm">Control the floor above or below objectives to force defenders out of power positions. Never execute without clearing utility first.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 text-center text-slate-600 border-t border-slate-900 text-xs">
+        <p>LAST UPDATED: OCTOBER 2023 | R6 TACTICAL ANALYSIS DATABASE</p>
+    </footer>
+
+</body>
+</html>
