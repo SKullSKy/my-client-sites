@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Six Siege | Tactical Shooter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: white; }
+        h1, h2, h3, .font-rajdhani { font-family: 'Rajdhani', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 212, 255, 0.2); }
+        .neon-cyan { text-shadow: 0 0 10px #00d4ff; }
+        .neon-pink { text-shadow: 0 0 10px #ff006e; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass px-6 py-4 flex justify-between items-center transition-all duration-300">
+        <div class="text-2xl font-bold tracking-tighter text-white font-rajdhani">RAINBOW SIX <span class="text-[#00d4ff]">SIEGE</span></div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#" class="hover:text-[#00d4ff] transition">Operators</a>
+            <a href="#" class="hover:text-[#00d4ff] transition">Maps</a>
+            <a href="#" class="hover:text-[#00d4ff] transition">Esports</a>
+            <a href="#" class="hover:text-[#00d4ff] transition">Lore</a>
+        </div>
+        <button class="bg-[#00d4ff] text-slate-950 font-bold px-6 py-2 rounded-sm hover:bg-white transition-all">PLAY NOW</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070" alt="Hero" class="absolute inset-0 w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tight font-rajdhani uppercase">Master The Siege</h1>
+            <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Engage in intense 5v5 tactical combat. Master destructible environments, unique operator gadgets, and strategic team play.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-[#00d4ff] text-slate-950 px-8 py-4 font-bold uppercase tracking-widest hover:scale-105 transition">Start Deployment</button>
+                <button class="border border-[#ff006e] text-[#ff006e] px-8 py-4 font-bold uppercase tracking-widest hover:bg-[#ff006e] hover:text-white transition">View Operators</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operators Grid -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-5xl font-bold mb-16 text-center font-rajdhani">OPERATOR ROSTER</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="group relative overflow-hidden rounded-sm bg-[#1e293b]">
+                <img src="https://images.unsplash.com/photo-1614294149030-24618e7e1088?q=80&w=800" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110 opacity-80" alt="Ash">
+                <div class="p-6">
+                    <span class="text-[#00d4ff] text-sm font-bold uppercase">Attacker</span>
+                    <h3 class="text-3xl font-bold mb-2 font-rajdhani">ASH</h3>
+                    <p class="text-slate-400 mb-4">Breach entry specialist equipped with the M120 CREM and breaching rounds.</p>
+                    <button class="text-[#00d4ff] font-bold flex items-center gap-2 hover:translate-x-2 transition">VIEW PROFILE <i data-lucide="chevron-right"></i></button>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="group relative overflow-hidden rounded-sm bg-[#1e293b]">
+                <img src="https://images.unsplash.com/photo-1593341643913-88f575459344?q=80&w=800" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110 opacity-80" alt="Caveira">
+                <div class="p-6">
+                    <span class="text-[#ff006e] text-sm font-bold uppercase">Defender</span>
+                    <h3 class="text-3xl font-bold mb-2 font-rajdhani">CAVEIRA</h3>
+                    <p class="text-slate-400 mb-4">Silent step specialist capable of interrogating downed enemies.</p>
+                    <button class="text-[#00d4ff] font-bold flex items-center gap-2 hover:translate-x-2 transition">VIEW PROFILE <i data-lucide="chevron-right"></i></button>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="group relative overflow-hidden rounded-sm bg-[#1e293b]">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=800" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110 opacity-80" alt="Thatcher">
+                <div class="p-6">
+                    <span class="text-[#00d4ff] text-sm font-bold uppercase">Attacker</span>
+                    <h3 class="text-3xl font-bold mb-2 font-rajdhani">THATCHER</h3>
+                    <p class="text-slate-400 mb-4">Master of EMP grenades, disabling electronics in a wide radius.</p>
+                    <button class="text-[#00d4ff] font-bold flex items-center gap-2 hover:translate-x-2 transition">VIEW PROFILE <i data-lucide="chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-[#1e293b] py-20 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div><i data-lucide="users" class="w-10 h-10 mx-auto text-[#00d4ff] mb-4"></i><div class="text-5xl font-bold mb-2 font-rajdhani neon-cyan">50M+</div><div class="text-slate-400">PLAYERS</div></div>
+            <div><i data-lucide="shield-check" class="w-10 h-10 mx-auto text-[#00d4ff] mb-4"></i><div class="text-5xl font-bold mb-2 font-rajdhani neon-cyan">70+</div><div class="text-slate-400">OPERATORS</div></div>
+            <div><i data-lucide="map" class="w-10 h-10 mx-auto text-[#00d4ff] mb-4"></i><div class="text-5xl font-bold mb-2 font-rajdhani neon-cyan">20+</div><div class="text-slate-400">MAPS</div></div>
+            <div><i data-lucide="calendar" class="w-10 h-10 mx-auto text-[#00d4ff] mb-4"></i><div class="text-5xl font-bold mb-2 font-rajdhani neon-cyan">15Y</div><div class="text-slate-400">CONTENT</div></div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-500 text-sm">
+        &copy; 2024 Ubisoft Entertainment. All Rights Reserved. Not a real game site.
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
