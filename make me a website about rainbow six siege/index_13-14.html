@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R6 Siege | Tactical Operations Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold tracking-tighter text-blue-500">R6<span class="text-white">TACTICAL</span></h1>
+            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest">
+                <a href="#home" class="hover:text-blue-400 transition-all">Home</a>
+                <a href="#operators" class="hover:text-blue-400 transition-all">Operators</a>
+                <a href="#maps" class="hover:text-blue-400 transition-all">Maps</a>
+                <a href="#news" class="hover:text-blue-400 transition-all">News</a>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-blue-900/20">JOIN DISCORD</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop" class="absolute w-full h-full object-cover opacity-30" alt="Siege Background">
+        <div class="relative z-10 text-center px-6">
+            <h2 class="text-6xl md:text-8xl font-extrabold mb-6">DEFEND. BREACH. <span class="text-red-500">CONQUER.</span></h2>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-10">The ultimate tactical shooter resource. Master your loadouts, learn the maps, and dominate the objective.</p>
+            <a href="#operators" class="bg-white text-slate-900 px-10 py-4 rounded-lg font-bold hover:bg-slate-200 transition-all">EXPLORE OPERATORS</a>
+        </div>
+    </section>
+
+    <!-- Operators Section -->
+    <section id="operators" class="py-24 max-w-7xl mx-auto px-6">
+        <h3 class="text-4xl font-bold mb-12 text-center">Elite Operators</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-slate-800 rounded-lg overflow-hidden group hover:shadow-2xl hover:shadow-blue-900/30 transition-all">
+                <img src="https://images.unsplash.com/photo-1614728853683-fb3370e5999f?q=80&w=800&auto=format&fit=crop" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-2">ASH</h4>
+                    <p class="text-blue-400 text-sm mb-4 italic">Attacker | FBI SWAT</p>
+                    <p class="text-slate-400 text-sm">Specialist in entry denial and breaching. Utilizing the M120 CREM to create tactical sightlines.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-slate-800 rounded-lg overflow-hidden group hover:shadow-2xl hover:shadow-blue-900/30 transition-all">
+                <img src="https://images.unsplash.com/photo-1593341617437-80252875f1b6?q=80&w=800&auto=format&fit=crop" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-2">MUTE</h4>
+                    <p class="text-blue-400 text-sm mb-4 italic">Defender | SAS</p>
+                    <p class="text-slate-400 text-sm">Signal disruptor expert. The primary counter to hard-breaching and drone reconnaissance.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-slate-800 rounded-lg overflow-hidden group hover:shadow-2xl hover:shadow-blue-900/30 transition-all">
+                <img src="https://images.unsplash.com/photo-1504275107627-865666061324?q=80&w=800&auto=format&fit=crop" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-2">THERMITE</h4>
+                    <p class="text-blue-400 text-sm mb-4 italic">Attacker | FBI SWAT</p>
+                    <p class="text-slate-400 text-sm">Essential for opening reinforced walls with his exothermic charge. The cornerstone of every attack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="bg-slate-800 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-4xl font-bold mb-12">Latest Intel</h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="border-l-4 border-yellow-500 pl-6">
+                    <span class="text-yellow-500 font-bold text-sm">OCT 24, 2023</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-4">Operation Heavy Mettle Patch Notes</h4>
+                    <p class="text-slate-400 mb-4">Discover the latest balance changes, operator reworks, and seasonal updates affecting the current competitive meta.</p>
+                    <a href="#" class="text-blue-500 font-semibold hover:underline">Read Full Details →</a>
+                </div>
+                <div class="border-l-4 border-yellow-500 pl-6">
+                    <span class="text-yellow-500 font-bold text-sm">OCT 15, 2023</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-4">Pro League Regional Finals</h4>
+                    <p class="text-slate-400 mb-4">The stage is set for the grand finals. Catch up on the bracket standings and team stats before the event starts.</p>
+                    <a href="#" class="text-blue-500 font-semibold hover:underline">View Standings →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-slate-500 text-sm uppercase tracking-widest mb-6">© 2023 R6Tactical Hub. All tactical operations reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-slate-400 hover:text-white transition-all">Discord</a>
+                <a href="#" class="text-slate-400 hover:text-white transition-all">Twitter</a>
+                <a href="#" class="text-slate-400 hover:text-white transition-all">Support</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
