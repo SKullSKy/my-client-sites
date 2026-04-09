@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Brew | Luxury Coffee Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1a1a1a',
+                        gold: '#d4af37',
+                        cream: '#e8e8e0',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(212, 175, 55, 0.2); }
+    </style>
+</head>
+<body class="bg-[#0f0f0f] text-cream font-sans antialiased selection:bg-gold selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-serif text-gold tracking-widest">MIDNIGHT BREW</div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+                <a href="#about" class="hover:text-gold transition">About</a>
+                <a href="#menu" class="hover:text-gold transition">Menu</a>
+                <a href="#gallery" class="hover:text-gold transition">Gallery</a>
+                <a href="#contact" class="hover:text-gold transition">Contact</a>
+            </div>
+            <a href="#contact" class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-black transition duration-300 text-sm">Reserve</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2000" class="absolute w-full h-full object-cover opacity-50" alt="Coffee Art">
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-6xl md:text-8xl font-serif mb-6">Awaken the Soul</h1>
+            <p class="text-xl md:text-2xl font-light mb-10 max-w-2xl mx-auto italic">Crafted in shadows, refined by perfection. Experience luxury in every drop.</p>
+            <a href="#menu" class="bg-gold text-black px-10 py-4 font-semibold tracking-widest hover:bg-white transition uppercase">Explore Blends</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="py-24 px-6 max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl font-serif text-gold mb-8">The Art of the Roast</h2>
+        <p class="text-lg leading-relaxed text-gray-300">Midnight Brew was born from a singular obsession: to elevate the coffee ritual into an art form. We source rare, high-altitude beans and roast them in small batches to preserve their complex flavor profiles, ensuring that every cup served is a symphony of depth and elegance.</p>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="py-24 bg-[#1a1a1a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-serif text-center mb-16 text-gold">Signature Selections</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                {[ {name: "Midnight Reserve", desc: "Velvety dark roast with notes of cocoa.", price: "$12"}, {name: "Golden Arabica", desc: "Floral aromatics with honey undertones.", price: "$14"}, {name: "Espresso Noir", desc: "Bold, intense, and impeccably smooth.", price: "$9"} ].map(item => (
+                    <div class="glass p-8 hover:border-gold transition duration-500 text-center">
+                        <h3 class="text-2xl font-serif mb-2">{item.name}</h3>
+                        <p class="text-gray-400 mb-6">{item.desc}</p>
+                        <span class="text-gold font-bold text-xl">{item.price}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800" class="h-64 object-cover w-full opacity-80 hover:opacity-100 transition" alt="Coffee">
+            <img src="https://images.unsplash.com/photo-1507133750040-4a8f570e3bc7?w=800" class="h-64 object-cover w-full opacity-80 hover:opacity-100 transition" alt="Coffee">
+            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800" class="h-64 object-cover w-full opacity-80 hover:opacity-100 transition" alt="Coffee">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" class="h-64 object-cover w-full opacity-80 hover:opacity-100 transition" alt="Coffee">
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="border-t border-gold/20 pt-16 pb-8 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 mb-16">
+            <div>
+                <h3 class="text-3xl font-serif text-gold mb-6">Midnight Brew</h3>
+                <p class="text-gray-400 mb-4">123 Luxury Lane, Metropolitan City</p>
+                <p class="text-gray-400">Open Daily: 06:00 AM – 10:00 PM</p>
+            </div>
+            <form class="glass p-8">
+                <input type="email" placeholder="Subscribe for exclusives" class="w-full bg-transparent border-b border-gray-600 py-2 focus:border-gold outline-none mb-6">
+                <button class="w-full border border-gold py-3 text-gold hover:bg-gold hover:text-black transition uppercase text-xs tracking-widest">Join the Circle</button>
+            </form>
+        </div>
+        <p class="text-center text-gray-600 text-sm italic">&copy; 2023 Midnight Brew. Crafted for the refined palate.</p>
+    </footer>
+
+</body>
+</html>
