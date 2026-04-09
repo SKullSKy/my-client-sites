@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHMANDS // MISSION CONTROL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --p: #bc13fe; 
+            --s: #ff00e0; 
+            --bg: #05010a; 
+            --panel: #0f031a; 
+            --money: #00ff88; 
+            --text: #ffffff;
+        }
+
+        body { 
+            background: var(--bg); 
+            color: var(--text); 
+            font-family: 'Rajdhani', sans-serif; 
+            margin: 0; 
+            display: flex; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
+
+        /* SIDEBAR */
+        .sidebar { 
+            width: 240px; 
+            background: var(--panel); 
+            border-right: 1px solid var(--p); 
+            padding: 30px 20px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+            box-shadow: 5px 0 15px rgba(188, 19, 254, 0.1);
+        }
+
+        .os-title { 
+            font-family: 'Orbitron'; 
+            color: var(--s); 
+            font-size: 1.2rem; 
+            margin-bottom: 30px; 
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--s);
+        }
+
+        .nav-item { 
+            padding: 15px; 
+            border: 1px solid transparent; 
+            cursor: pointer; 
+            transition: 0.3s; 
+            color: #fff; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .nav-item:hover, .nav-item.active { 
+            border: 1px solid var(--s); 
+            background: rgba(255, 0, 224, 0.1); 
+            box-shadow: 0 0 15px var(--s); 
+        }
+
+        /* MAIN DASHBOARD */
+        .main { 
+            flex: 1; 
+            padding: 30px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 25px; 
+            background: radial-gradient(circle at top right, #1a052a, transparent);
+        }
+
+        /* TOP STATS */
+        .stats-row { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; 
+        }
+
+        .stat-card { 
+            background: var(--panel); 
+            border: 1px solid var(--p); 
+            padding: 20px; 
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--s), transparent);
+        }
+
+        .stat-label { font-size: 12px; color: var(--s); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; display: block; }
+        .stat-val { font-family: 'Orbitron'; font-size: 24px; color: #fff; text-shadow: 0 0 5px var(--p); }
+
+        /* GRID CONTENT */
+        .content-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1.5fr; 
+            gap: 25px; 
+            flex: 1; 
+        }
+
+        .panel { 
+            background: var(--panel); 
+            border: 1px solid var(--p); 
+            padding: 20px; 
+            display: flex; 
+            flex-direction: column;
+            box-shadow: inset 0 0 20px rgba(188, 19, 254, 0.05);
+        }
+
+        .panel-header { 
+            font-family: 'Orbitron'; 
+            font-size: 14px; 
+            margin-bottom: 20px; 
+            border-bottom: 1px solid var(--p); 
+            padding-bottom: 10px; 
+            color: var(--s);
+        }
+
+        /* TERMINAL LOG */
+        #terminal { 
+            font-family: 'Courier New', Courier, monospace; 
+            font-size: 14px; 
+            color: var(--money); 
+            line-height: 1.6; 
+            overflow-y: auto; 
+            flex: 1; 
+            padding: 10px;
+        }
+
+        /* LIVE PREVIEW WINDOW */
+        .preview-window { 
+            flex: 1; 
+            background: #FAF9F6; /* Clean, warm professional background */
+            border: 4px solid #1a1a1a; 
+            border-radius: 4px; 
+            overflow: hidden; 
+            position: relative; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .preview-bar {
+            background: #1a1a1a;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            gap: 5px;
+        }
+
+        .dot { width: 8px; height: 8px; border-radius: 50%; }
+        .dot.r { background: #ff5f56; }
+        .dot.y { background: #ffbd2e; }
+        .dot.g { background: #27c93f; }
+
+        iframe { width: 100%; height: calc(100% - 25px); border: none; }
+
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="os-title">AHMANDS_OS</div>
+    <div class="nav-item active">Command Center</div>
+    <div class="nav-item">Operations</div>
+    <div class="nav-item">Live Agents</div>
+    <div class="nav-item">System Logs</div>
+</div>
+
+<div class="main">
+    <div class="stats-row">
+        <div class="stat-card">
+            <span class="stat-label">Total Revenue</span>
+            <span class="stat-val" style="color: var(--money)">$2,450.00</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Active Projects</span>
+            <span class="stat-val">03</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">System Health</span>
+            <span class="stat-val" style="color: var(--money)">STABLE</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">Monthly Expenses</span>
+            <span class="stat-val" style="color: #ff4444">$430.00</span>
+        </div>
+    </div>
+
+    <div class="content-grid">
+        <div class="panel">
+            <div class="panel-header">AI ENGINE FEED [LIVE]</div>
+            <div id="terminal">
+                > INITIALIZING CORE SYSTEMS...<br>
+                > NGROK TUNNEL: <span style="color:#fff">ACTIVE</span><br>
+                > TELEGRAM BOT: <span style="color:#fff">LISTENING</span><br>
+                > WAITING FOR NEW CLIENT REQUEST...
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">LATEST CLIENT BUILD PREVIEW</div>
+            <div class="preview-window">
+                <div class="preview-bar">
+                    <div class="dot r"></div>
+                    <div class="dot y"></div>
+                    <div class="dot g"></div>
+                </div>
+                <iframe src="about:blank" id="client-frame"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
