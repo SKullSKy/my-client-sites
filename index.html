@@ -1,23 +1,33 @@
 <script>
-    // Loads the folder into the window
-    function view(slug) {
+    async function view(slug) {
         const viewer = document.getElementById('viewer');
         const title = document.getElementById('view-title');
         if(!slug) return;
         
+        // Debugging log - Press F12 in your browser to see this!
+        console.log("Attempting to load build:", slug);
+        
+        title.innerText = "Loading Build: " + slug + "...";
         viewer.src = `./sites/${slug}/index.html`;
-        title.innerText = "Viewing Build: " + slug;
+        
+        viewer.onload = () => title.innerText = "Viewing Build: " + slug;
+        viewer.onerror = () => title.innerText = "Error: Build folder not found!";
     }
 
-    // Automatically finds the newest build from n8n
     async function autoLoad() {
         try {
-            // The ?v= bit stops the browser from showing you an old version
             const response = await fetch('./latest.json?v=' + Date.now());
+            if (!response.ok) throw new Error("latest.json not found");
+            
             const data = await response.json();
-            view(data.last_site);
+            console.log("JSON Data received:", data);
+            
+            if (data.last_site) {
+                view(data.last_site);
+            }
         } catch (e) {
-            console.log("Dashboard ready. Send a Telegram message to see your first build!");
+            document.getElementById('view-title').innerText = "Dashboard Ready - Waiting for first build...";
+            console.error("Setup error:", e);
         }
     }
 
