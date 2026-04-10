@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+  {
+  "theme": "Natural Interior",
+  "colors": [
+    "#964B00",
+    "#788F3C",
+    "#3E8E41",
+    "#663300",
+    "#228B22"
+  ],
+  "fonts": [
+    "Montserrat",
+    "Lato"
+  ],
+  "sections": [
+    "Header",
+    "Hero",
+    "Natural Materials",
+    "Eco-Friendly Products",
+    "Customer Testimonials",
+    "Sustainable Practices",
+    "Footer"
+  ]
+}
+</head>
+<body>
+  <html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Interior</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md py-4 px-10 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold" style="color: #3E8E41;">Natural Interior</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-green-700 transition-all">Home</a>
+                <a href="#" class="hover:text-green-700 transition-all">Materials</a>
+                <a href="#" class="hover:text-green-700 transition-all">Products</a>
+                <a href="#" class="hover:text-green-700 transition-all">About</a>
+                <a href="#" class="hover:text-green-700 transition-all">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class='py-20 px-10 bg-gray-50'>
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #663300;">Bring Nature Into Your Home</h1>
+                <p class="text-lg mb-8 text-gray-700">Discover our collection of sustainable, handcrafted interior pieces that connect you with nature.</p>
+                <button class='px-8 py-3 bg-green-700 text-white rounded-full font-bold hover:bg-green-800 transition-all'>Explore Collection</button>
+            </div>
+            <div class="md:w-1/2 md:pl-10">
+                <img src="https://source.unsplash.com/featured/?natural,interior" alt="Natural Interior" class='w-full h-64 object-cover rounded-2xl shadow-md'>
+            </div>
+        </div>
+    </section>
+
+    <!-- Natural Materials Section -->
+    <section class='py-20 px-10'>
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" style="color: #788F3C;">Premium Natural Materials</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <img src="https://source.unsplash.com/featured/?wood" alt="Wood" class='w-full h-64 object-cover rounded-2xl shadow-md mb-4'>
+                    <h3 class="text-xl font-bold mb-2" style="color: #964B00;">Solid Wood</h3>
+                    <p class="text-gray-700">Sustainably sourced hardwoods with natural grain patterns.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <img src="https://source.unsplash.com/featured/?bamboo" alt="Bamboo" class='w-full h-64 object-cover rounded-2xl shadow-md mb-4'>
+                    <h3 class="text-xl font-bold mb-2" style="color: #3E8E41;">Bamboo</h3>
+                    <p class="text-gray-700">Fast-growing and durable eco-friendly alternative.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <img src="https://source.unsplash.com/featured/?stone" alt="Stone" class='w-full h-64 object-cover rounded-2xl shadow-md mb-4'>
+                    <h3 class="text-xl font-bold mb-2" style="color: #663300;">Natural Stone</h3>
+                    <p class="text-gray-700">Beautiful and timeless stone elements for your space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eco-Friendly Products Section -->
+    <section class='py-20 px-10 bg-gray-50'>
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" style="color: #228B22;">Eco-Friendly Products</h2>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <img src="https://source.unsplash.com/featured/?eco,furniture" alt="Eco Furniture" class='w-full h-64 object-cover rounded-2xl shadow-md'>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #788F3C;">Sustainable Furniture</h3>
+                    <p class="text-gray-700 mb-6">Our furniture pieces are crafted with environmental responsibility in mind, using non-toxic finishes and recycled materials.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #3E8E41;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>100% organic materials</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #3E8E41;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Low-VOC finishes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #3E8E41;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Carbon-neutral shipping</span>
+                        </li>
+                    </ul>
+                    <button class='px-8 py-3 bg-green-700 text-white rounded-full font-bold hover:bg-green-800 transition-all'>Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class='py-20 px-10'>
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" style="color: #964B00;">What Our Customers Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://source.unsplash.com/featured/?portrait,woman" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <div class="flex" style="color: #788F3C;">
+                                ★ ★ ★ ★ ★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The bamboo dining table is absolutely stunning and has held up beautifully with daily use. Love that it's sustainably made!"</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://source.unsplash.com/featured/?portrait,man" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Michael T.</h4>
+                            <div class="flex" style="color: #788F3C;">
+                                ★ ★ ★ ★ ★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Exceptional craftsmanship on our reclaimed wood bookshelf. It's the centerpiece of our living room now."</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://source.unsplash.com/featured/?portrait,senior" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Elizabeth W.</h4>
+                            <div class="flex" style="color: #788F3C;">
+                                ★ ★ ★ ★ ★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The natural stone countertops transformed our kitchen. The team was professional and the quality is outstanding."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainable Practices Section -->
+    <section class='py-20 px-10 bg-gray-50'>
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4" style="color: #228B22;">Our Sustainable Practices</h2>
+                <p class="text-lg max-w-2xl mx-auto text-gray-700">We're committed to preserving nature while creating beautiful spaces for you to enjoy.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-md" style="background-color: #788F3C;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Reforestation</h3>
+                    <p class="text-gray-700">We plant 10 trees for every product sold</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-md" style="background-color: #3E8E41;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Recycled Materials</h3>
+                    <p class="text-gray-700">85% of our materials are recycled or reclaimed</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-md" style="background-color: #964B00;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Local Craftsmanship</h3>
+                    <p class="text-gray-700">Supporting local artisans and communities</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-md" style="background-color: #663300;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Quality Guarantee</h3>
+                    <p class="text-gray-700">10-year warranty on all our products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-10 bg-gray-900 text-white">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <h3 class="text-xl font-bold mb-4" style="color: #788F3C;">Natural Interior</h3>
+                    <p class="mb-4 text-gray-400">Bringing nature's beauty into your home with sustainable, handcrafted designs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v
+  <html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Interior</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            letter-spacing: 0.05em;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+
+
+    <!-- Navbar -->
+    <nav class="bg-white/10 backdrop-blur-md py-4 px-10 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold" style="color: #3E8E41;">Natural Interior</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-green-700 transition-all hover:scale-105 transition-duration-300">Home</a>
+                <a href="#" class="hover:text-green-700 transition-all hover:scale-105 transition-duration-300">Materials</a>
+                <a href="#" class="hover:text-green-700 transition-all hover:scale-105 transition-duration-300">Products</a>
+                <a href="#" class="hover:text-green-700 transition-all hover:scale-105 transition-duration-300">About</a>
+                <a href="#" class="hover:text-green-700 transition-all hover:scale-105 transition-duration-300">Contact</a>
+            </div>
+            <button class="md:hidden hover:scale-105 transition-duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class='py-20 px-10 bg-gray-50'>
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #663300;">Bring Nature Into Your Home</h1>
+                <p class="text-lg mb-8 text-gray-700">Discover our collection of sustainable, handcrafted interior pieces that connect you with nature.</p>
+                <button class='px-8 py-3 bg-green-700 text-white rounded-full font-bold hover:bg-green-800 transition-all hover:scale-105 transition-duration-300'>Explore Collection</button>
+            </div>
+            <div class="md:w-1/2 md:pl-10">
+                <img src="https://source.unsplash.com/featured/?natural,interior" alt="Natural Interior" class='w-full h-64 object-cover rounded-2xl shadow-md'>
+            </div>
+        </div>
+    </section>
+
+    <!-- Natural Materials Section -->
+    <section class='py-20 px-10'>
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" style="color: #788F3C;">Premium Natural Materials</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:scale-105 transition-duration-300">
+                    <img src="https://source.unsplash.com/featured/?wood" alt="Wood" class='w-full h-64 object-cover rounded-2xl shadow-md mb-4'>
+                    <h3 class="text-xl font-bold mb-2" style="color: #964B00;">Solid Wood</h3>
+                    <p class="text-gray-700">Sustainably sourced hardwoods with natural grain patterns.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:scale-105 transition-duration-300">
+                    <img src="https://source.unsplash.com/featured/?bamboo" alt="Bamboo" class='w-full h-64 object-cover rounded-2xl shadow-md mb-4'>
+                    <h3 class="text-xl font-bold mb-2" style="color: #3E8E41;">Bamboo</h3>
+                    <p class="text-gray-700">Fast-growing and durable eco-friendly alternative.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:scale-105 transition-duration-300">
+                    <img src="https://source.unsplash.com/featured/?stone" alt="Stone" class='w-full h-64 object-cover rounded-2xl shadow-md mb-4'>
+                    <h3 class="text-xl font-bold mb-2" style="color: #663300;">Natural Stone</h3>
+                    <p class="text-gray-700">Beautiful and timeless stone elements for your space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eco-Friendly Products Section -->
+    <section class='py-20 px-10 bg-gray-50'>
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" style="color: #228B22;">Eco-Friendly Products</h2>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <img src="https://source.unsplash.com/featured/?eco,furniture" alt="Eco Furniture" class='w-full h-64 object-cover rounded-2xl shadow-md'>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: #788F3C;">Sustainable Furniture</h3>
+                    <p class="text-gray-700 mb-6">Our furniture pieces are crafted with environmental responsibility in mind, using non-toxic finishes and recycled materials.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #3E8E41;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>100% organic materials</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #3E8E41;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Low-VOC finishes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" style="color: #3E8E41;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Carbon-neutral shipping</span>
+                        </li>
+                    </ul>
+                    <button class='px-8 py-3 bg-green-700 text-white rounded-full font-bold hover:bg-green-800 transition-all hover:scale-105 transition-duration-300'>Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class='py-20 px-10'>
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" style="color: #964B00;">What Our Customers Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:scale-105 transition-duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://source.unsplash.com/featured/?portrait,woman" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <div class="flex" style="color: #788F3C;">
+                                ★ ★ ★ ★ ★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The bamboo dining table is absolutely stunning and has held up beautifully with daily use. Love that it's sustainably made!"</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:scale-105 transition-duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://source.unsplash.com/featured/?portrait,man" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Michael T.</h4>
+                            <div class="flex" style="color: #788F3C;">
+                                ★ ★ ★ ★ ★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Exceptional craftsmanship on our reclaimed wood bookshelf. It's the centerpiece of our living room now."</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:scale-105 transition-duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="https://source.unsplash.com/featured/?portrait,senior" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Elizabeth W.</h4>
+                            <div class="flex" style="color: #788F3C;">
+                                ★ ★ ★ ★ ★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"The natural stone countertops transformed our kitchen. The team was professional and the quality is outstanding."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainable Practices Section -->
+    <section class='py-20 px-10 bg-gray-50'>
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4" style="color: #228B22;">Our Sustainable Practices</h2>
+                <p class="text-lg max-w-2xl mx-auto text-gray-700">We're committed to preserving nature while creating beautiful spaces for you to enjoy.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-md" style="background-color: #788F3C;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Reforestation</h3>
+                    <p class="text-gray-700">We plant 10 trees for every product sold</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-md" style="background-color: #3E8E41;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Recycled Materials</h3>
+                    <p class="text-gray-700">85% of our materials are recycled or reclaimed</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-md" style="background-color: #964B00;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Local Craftsmanship</h3>
+                    <p class="text-gray-700">Supporting local artisans and communities</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4 shadow-md" style="background-color: #663300;">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Quality Guarantee</h3>
+                    <p class="text-gray-700">10-year warranty on all our products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-10 bg-gray-900 text-white">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-10 mb-10">
+                <div>
+                    <h3 class="text-xl font-bold mb-4" style="color: #788F3C;">Natural Interior</h3>
+                    <p class="mb-4 text-gray-400">Bringing nature's beauty into your home with sustainable, handcrafted designs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671H4.085v11.495h15.59l-.732 7.347z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
