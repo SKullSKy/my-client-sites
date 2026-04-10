@@ -21,14 +21,24 @@
             transition: 0.2s;
         }
         .project-btn:hover { background: #6b21a8; }
+        input { background: #090613; border: 1px solid #3b2b63; color: #a78bfa; }
     </style>
 </head>
 <body class="overflow-hidden">
     <div class="flex h-screen">
         <div class="w-80 sidebar p-6 flex flex-col">
-            <h1 class="text-2xl font-bold text-purple-400 mb-8 tracking-tight">PROJECTS</h1>
+            <h1 class="text-2xl font-bold text-purple-400 mb-8 tracking-tight">CONTROL CENTER</h1>
             
+            <div class="mb-6">
+                <label class="text-[10px] text-purple-300 uppercase font-bold mb-2 block">Quick Load Folder</label>
+                <div class="flex gap-2">
+                    <input type="text" id="manual-slug" placeholder="e.g. 14-30-05" class="w-full p-2 rounded text-sm focus:outline-none">
+                    <button onclick="loadManual()" class="bg-purple-600 px-3 rounded">Go</button>
+                </div>
+            </div>
+
             <div id="list" class="flex-grow space-y-3 overflow-y-auto">
+                <p class="text-[10px] text-purple-300 uppercase font-bold mb-2">Recent Projects</p>
                 <button onclick="view('nature-interior')" class="w-full project-btn p-4 rounded-lg text-left font-medium">
                     🌿 Nature Interior
                 </button>
@@ -36,15 +46,15 @@
 
             <div class="mt-auto pt-6 border-t border-purple-900">
                 <p class="text-xs text-purple-400 uppercase font-bold">System Status</p>
-                <p class="text-green-400 text-sm italic">● AI Engines Online</p>
+                <p class="text-green-400 text-sm italic">● Connected to GitHub</p>
             </div>
         </div>
 
         <div class="flex-grow preview-area p-8">
             <div class="flex justify-between items-center mb-6">
-                <h2 id="view-title" class="text-xl text-purple-200">Select a project to preview...</h2>
+                <h2 id="view-title" class="text-xl text-purple-200">Waiting for project...</h2>
                 <div class="flex gap-4">
-                    <button onclick="refresh()" class="text-xs bg-slate-800 px-3 py-1 rounded">Reload</button>
+                    <button onclick="refresh()" class="text-xs bg-slate-800 px-3 py-1 rounded hover:bg-slate-700">Reload Frame</button>
                 </div>
             </div>
 
@@ -58,11 +68,23 @@
         function view(slug) {
             const viewer = document.getElementById('viewer');
             const title = document.getElementById('view-title');
-            // This pulls from your /sites/ folder
-            viewer.src = `./sites/${slug}/index.html`;
-            title.innerText = "Viewing: " + slug.toUpperCase();
+            
+            // Path logic: points to your subfolders
+            const targetPath = `./sites/${slug}/index.html`;
+            viewer.src = targetPath;
+            title.innerText = "Viewing: " + slug;
+            console.log("Loading path: " + targetPath);
         }
-        function refresh() { document.getElementById('viewer').contentWindow.location.reload(); }
+
+        function loadManual() {
+            const val = document.getElementById('manual-slug').value;
+            if(val) view(val);
+        }
+
+        function refresh() { 
+            const viewer = document.getElementById('viewer');
+            viewer.src = viewer.src; 
+        }
     </script>
 </body>
 </html>
