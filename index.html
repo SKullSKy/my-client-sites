@@ -3,49 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Site Builder | Admin</title>
+    <title>AI Architect | Control Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #1a103f; font-family: 'Segoe UI', sans-serif; }
-        .purple-gradient { background: linear-gradient(135deg, #6b21a8 0%, #4c1d95 100%); }
-        .preview-window { background: #fff; border-radius: 8px; overflow: hidden; height: calc(100vh - 150px); }
+        body { background-color: #0f0a1f; color: white; font-family: 'Inter', sans-serif; }
+        .sidebar { background: #1a103f; border-right: 1px solid #3b2b63; }
+        .preview-area { background: #090613; }
+        .iframe-container { 
+            background: white; 
+            border-radius: 12px; 
+            height: calc(100vh - 120px); 
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+        }
+        .project-btn {
+            background: rgba(107, 33, 168, 0.2);
+            border: 1px solid #6b21a8;
+            transition: 0.2s;
+        }
+        .project-btn:hover { background: #6b21a8; }
     </style>
 </head>
-<body class="text-white">
+<body class="overflow-hidden">
     <div class="flex h-screen">
-        <div class="w-1/4 purple-gradient p-6 shadow-2xl">
-            <h1 class="text-2xl font-bold mb-8 border-b border-purple-400 pb-4">Architect Brain v2</h1>
+        <div class="w-80 sidebar p-6 flex flex-col">
+            <h1 class="text-2xl font-bold text-purple-400 mb-8 tracking-tight">PROJECTS</h1>
             
-            <div class="space-y-4">
-                <p class="text-purple-200 text-sm uppercase tracking-widest">Active Projects</p>
-                <div id="project-list" class="space-y-2">
-                    <button onclick="loadSite('nature-interior')" class="w-full text-left p-3 rounded bg-purple-900 hover:bg-purple-700 transition">
-                        🌿 Nature Interior
-                    </button>
-                </div>
+            <div id="list" class="flex-grow space-y-3 overflow-y-auto">
+                <button onclick="view('nature-interior')" class="w-full project-btn p-4 rounded-lg text-left font-medium">
+                    🌿 Nature Interior
+                </button>
+            </div>
+
+            <div class="mt-auto pt-6 border-t border-purple-900">
+                <p class="text-xs text-purple-400 uppercase font-bold">System Status</p>
+                <p class="text-green-400 text-sm italic">● AI Engines Online</p>
             </div>
         </div>
 
-        <div class="w-3/4 p-8 bg-slate-900">
-            <div class="flex justify-between items-center mb-4">
-                <h2 id="current-title" class="text-xl font-semibold">Live Preview</h2>
-                <span class="px-3 py-1 bg-green-500 rounded-full text-xs font-bold uppercase">Connected</span>
+        <div class="flex-grow preview-area p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 id="view-title" class="text-xl text-purple-200">Select a project to preview...</h2>
+                <div class="flex gap-4">
+                    <button onclick="refresh()" class="text-xs bg-slate-800 px-3 py-1 rounded">Reload</button>
+                </div>
             </div>
-            
-            <div class="preview-window shadow-inner">
-                <iframe id="preview-frame" src="" class="w-full h-full border-none" title="Site Preview"></iframe>
+
+            <div class="iframe-container">
+                <iframe id="viewer" src="about:blank" class="w-full h-full rounded-xl border-none"></iframe>
             </div>
         </div>
     </div>
 
     <script>
-        function loadSite(slug) {
-            const frame = document.getElementById('preview-frame');
-            const title = document.getElementById('current-title');
-            // This points to the new /sites/ folder path
-            frame.src = `./sites/${slug}/index.html`;
-            title.innerText = "Previewing: " + slug.replace('-', ' ');
+        function view(slug) {
+            const viewer = document.getElementById('viewer');
+            const title = document.getElementById('view-title');
+            // This pulls from your /sites/ folder
+            viewer.src = `./sites/${slug}/index.html`;
+            title.innerText = "Viewing: " + slug.toUpperCase();
         }
+        function refresh() { document.getElementById('viewer').contentWindow.location.reload(); }
     </script>
 </body>
 </html>
