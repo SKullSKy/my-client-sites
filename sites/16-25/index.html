@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang='lv'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>NOVA RIGA — Future Is Now</title>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <style>
+        body { background: #0a0a0a; color: white; margin: 0; overflow-x: hidden; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(139,92,246,0.3); } 50% { box-shadow: 0 0 60px rgba(139,92,246,0.8); } }
+        @keyframes gradient-shift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+        .float-anim { animation: float 6s ease-in-out infinite; }
+        .glow-card { animation: pulse-glow 3s ease-in-out infinite; }
+        .gradient-bg { background: linear-gradient(270deg, #7c3aed, #db2777, #2563eb, #059669); background-size: 400% 400%; animation: gradient-shift 8s ease infinite; }
+        .spin-ring { animation: spin-slow 20s linear infinite; }
+        .marquee-track { animation: marquee 20s linear infinite; }
+        .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
+        .text-glow { text-shadow: 0 0 40px rgba(139,92,246,0.6); }
+        .card-hover { transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
+        .card-hover:hover { transform: translateY(-8px) scale(1.02); background: rgba(255,255,255,0.09); }
+        ::-webkit-scrollbar { width: 2px; } ::-webkit-scrollbar-track { background: #0a0a0a; } ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 10px; }
+        .orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.15; pointer-events: none; }
+    </style>
+</head>
+<body>
+    <!-- FIXED GLASS NAV -->
+    <nav class='fixed top-5 left-1/2 -translate-x-1/2 w-11/12 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-full z-50 flex justify-between items-center'>
+        <div class='font-black text-xl uppercase tracking-widest text-white flex items-center gap-2'>
+            <span class='w-3 h-3 rounded-full gradient-bg inline-block'></span>
+            NOVA RIGA
+        </div>
+        <div class='hidden md:flex space-x-8 font-medium text-gray-300'>
+            <span class='hover:text-white cursor-pointer transition-colors'>Sākums</span>
+            <span class='hover:text-white cursor-pointer transition-colors'>Kolekcija</span>
+            <span class='hover:text-white cursor-pointer transition-colors'>Stāsts</span>
+            <span class='hover:text-white cursor-pointer transition-colors'>Pasaule</span>
+        </div>
+        <button class='bg-white text-black px-8 py-2 rounded-full font-bold hover:scale-105 hover:bg-violet-200 transition-all duration-300'>Sazināties</button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class='min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden'>
+        <!-- Background Orbs -->
+        <div class='orb w-96 h-96 bg-violet-600 top-10 left-10'></div>
+        <div class='orb w-80 h-80 bg-pink-600 bottom-20 right-10'></div>
+        <div class='orb w-64 h-64 bg-blue-600 top-1/2 left-1/2 -translate-x-1/2'></div>
+
+        <!-- Spinning Ring Decoration -->
+        <div class='spin-ring absolute w-[600px] h-[600px] border border-white/5 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'></div>
+        <div class='spin-ring absolute w-[800px] h-[800px] border border-violet-500/10 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' style='animation-direction: reverse; animation-duration: 30s;'></div>
+
+        <!-- Badge -->
+        <div class='glass px-6 py-2 rounded-full text-sm font-medium text-violet-300 mb-8 tracking-widest uppercase'>
+            ✦ Rīga · 2026 · Nākotne ir šeit ✦
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class='text-7xl md:text-[10rem] font-black tracking-tighter leading-none mb-8 bg-gradient-to-b from-white via-gray-200 to-gray-600 bg-clip-text text-transparent text-glow relative z-10'>
+            RĪGAS<br>
+            <span class='bg-gradient-to-r from-violet-400 via-pink-400 to-blue-400 bg-clip-text text-transparent'>PULS</span>
+            <br>RIGA'S SOUL
+        </h1>
+
+        <p class='text-xl text-gray-400 max-w-3xl mb-6 leading-relaxed relative z-10'>
+            Kur senas ielas satiekas ar nākotnes vīzijām. Mēs neesam tikai zīmols — mēs esam kustība, kas pulcē drosmīgos, radošos un neizsīkstošos garus no visas pasaules.
+        </p>
+        <p class='text-base text-gray-600 max-w-2xl mb-12 italic relative z-10'>
+            Where ancient cobblestones meet tomorrow's vision. We are not just a brand — we are a movement forged in Baltic fire.
+        </p>
+
+        <div class='flex gap-4 flex-wrap justify-center relative z-10'>
+            <button class='gradient-bg text-white px-10 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/30'>
+                Izpētīt / Explore Now ✦
+            </button>
+            <button class='glass text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all duration-300 border border-white/20'>
+                Skatīt Kolekciju →
+            </button>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class='absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600 text-xs tracking-widest'>
+            <span>RITINĀT / SCROLL</span>
+            <div class='w-px h-16 bg-gradient-to-b from-gray-600 to-transparent'></div>
+        </div>
+    </header>
+
+    <!-- MARQUEE STRIP -->
+    <div class='overflow-hidden py-6 border-y border-white/5 bg-white/2'>
+        <div class='flex marquee-track whitespace-nowrap gap-12 text-gray-600 uppercase tracking-widest text-sm font-bold'>
+            <span>✦ Rīga 2026</span>
+            <span>✦ Baltic Future</span>
+            <span>✦ Nākotne</span>
+            <span>✦ Innovation</span>
+            <span>✦ Inovācija</span>
+            <span>✦ Design Forward</span>
+            <span>✦ Dizains</span>
+            <span>✦ Vision</span>
+            <span>✦ Vīzija</span>
+            <span>✦ Rīga 2026</span>
+            <span>✦ Baltic Future</span>
+            <span>✦ Nākotne</span>
+            <span>✦ Innovation</span>
+            <span>✦ Inovācija</span>
+            <span>✦ Design Forward</span>
+            <span>✦ Dizains</span>
+            <span>✦ Vision</span>
+            <span>✦ Vīzija</span>
+        </div>
+    </div>
+
+    <!-- BENTO GRID SECTION -->
+    <section class='grid grid-cols-1 md:grid-cols-2 gap-
