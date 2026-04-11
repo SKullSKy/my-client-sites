@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="lv" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0a0a0a; color: white; font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-[#D4AF37] serif">
+                    Dabas Interjeri / Nature Interiors
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="text-white hover:text-[#D4AF37] transition-colors">Sākums / Home</a>
+                    <a href="#about" class="text-white hover:text-[#D4AF37] transition-colors">Par Mums / About</a>
+                    <a href="#services" class="text-white hover:text-[#D4AF37] transition-colors">Pakalpojumi / Services</a>
+                    <a href="#portfolio" class="text-white hover:text-[#D4AF37] transition-colors">Portfelis / Portfolio</a>
+                    <a href="#contact" class="text-white hover:text-[#D4AF37] transition-colors">Kontakti / Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+        <div class="relative z-10 text-center max-w-6xl mx-auto px-6">
+            <h1 class="text-6xl md:text-8xl font-bold serif text-[#D4AF37] mb-6">
+                Fosīlijas Ozols<br>
+                <span class="text-white">Fossilized Oak</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Ekskluzīvi dabas interjeri ar dzīvo sūnu un biofilisko dizainu. Pārvērtiet savu telpu par dabas oāzi.<br>
+                <span class="text-gray-400">Exclusive nature interiors with living moss and biophilic design. Transform your space into a natural oasis.</span>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-[#D4AF37] text-black px-8 py-4 text-lg font-bold hover:bg-yellow-500 transition-colors">
+                    Apskatīt Pakalpojumus / View Services
+                </a>
+                <a href="#portfolio" class="border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-4 text-lg font-bold hover:bg-[#D4AF37] hover:text-black transition-colors">
+                    Portfelis / Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold serif text-[#D4AF37] mb-6">
+                        Mūsu Misija<br>
+                        <span class="text-white text-3xl">Our Mission</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Mēs specializējamies ekskluzīvu dabas interjeru radīšanā, izmantojot fosīlijas ozolu, dzīvo sūnu un biofiliskā dizaina principus. Katrs projekts ir unikāls mākslas darbs.
+                    </p>
+                    <p class="text-lg text-gray-400 mb-8">
+                        We specialize in creating exclusive nature interiors using fossilized oak, living moss, and biophilic design principles. Each project is a unique work of art.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-[#D4AF37]">50+</div>
+                            <div class="text-gray-400">Projekti / Projects</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-[#D4AF37]">15+</div>
+                            <div class="text-gray-400">Gadi / Years</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-[#D4AF37]/20 to-transparent p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold text-[#D4AF37] mb-4">
+                        Biofiliskais Dizains / Biophilic Design
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Mūsu pieeja balstās uz cilvēka dabisko saikni ar dabu, radot telpas, kas uzlabo labsajūtu un produktivitāti.
+                    </p>
+                    <p class="text-gray-400">
+                        Our approach is based on humans' natural connection with nature, creating spaces that improve well-being and productivity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold serif text-[#D4AF37] text-center mb-12">
+                Mūsu Pakalpojumi<br>
+                <span class="text-white text-3xl">Our Services</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-8 rounded-lg hover:bg-gray-800 transition-colors">
+                    <h3 class="text-2xl font-bold text-[#D4AF37] mb-4">
+                        Fosīlijas Ozola Sienas<br>
+                        <span class="text-lg text-gray-400">Fossilized Oak Walls</span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Ekskluzīvas sienu apdares no tūkstošiem gadu vecā fosīlijas ozola. Katrs gabals ir unikāls ar savu tekstūru un rakstu.
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        Exclusive wall finishes from thousands of years old fossilized oak. Each piece is unique with its own texture and pattern.
+                    </p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-lg hover:bg-gray-800 transition-colors">
+                    <h3 class="text-2xl font-bold text-[#D4AF37] mb-4">
+                        Dzīvās Sūnu Sienas<br>
+                        <span class="text-lg text-gray-400">Living Moss Walls</span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Dzīvās sūnu sienas, kas attīra gaisu un rada mierīgu, dabīgu atmosfēru jūsu telpā. Minimāla apkope nepieciešama.
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        Living moss walls that purify air and create a peaceful, natural atmosphere in your space. Minimal maintenance required.
+                    </p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-lg hover:bg-gray-800 transition-colors">
+                    <h3 class="text-2xl font-bold text-[#D4AF37] mb-4">
+                        Biofiliskais Dizains<br>
+                        <span class="text-lg text-gray-400">Biophilic Design</span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Pilnīga telpu pārveidošana, integrējot dabas elementus arhitektūrā un dizainā maksimālai labsajūtai.
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        Complete space transformation, integrating natural elements into architecture and design for maximum well-being.
+                    </p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-lg hover:bg-gray-800 transition-colors md:col-span-2">
+                    <h3 class="text-2xl font-bold text-[#D4AF37] mb-4">
+                        Ekskluzīvie Mēbeļu Risinājumi<br>
+                        <span class="text-lg text-gray-400">Exclusive Furniture Solutions</span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Pielāgoti mēbeļu gabali no fosīlijas ozola un citiem dabīgiem materiāliem. Katrs gabals ir rokdarbs ar 50 gadu garantiju.
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        Custom furniture pieces from fossilized oak and other natural materials. Each piece is handcrafted with a 50-year guarantee.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-[#D4AF37]/20 to-transparent p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold text-[#D4AF37] mb-4">
+                        Konsultācijas<br>
+                        <span class="text-lg text-gray-400">Consultations</span>
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Ekspertu konsultācijas par biofilisko dizainu un dabas elementu integrāciju jūsu projektā.
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        Expert consultations on biophilic design and natural element integration in your project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold serif text-[#D4AF37] text-center mb-12">
+                Mūsu Darbi<br>
+                <span class="text-white text-3xl">Our Work</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-black rounded-lg overflow-hidden hover:scale-105 transition-transform">
+                    <div class="h-64 bg-gradient-to-br from-[#D4AF37]/30 to-gray-800"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2">
+                            Fosīlijas Ozola Bibliotēka<br>
+                            <span class="text-sm text-gray-400">Fossilized Oak Library</span>
+                        </h3>
+                        <p class="text-gray-300 text-sm">
+                            Privāta bibliotēka ar fosīlijas ozola plauktiem un dzīvo sūnu akcentiem.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-black rounded-lg overflow-hidden hover:scale-105 transition-transform">
+                    <div class="h-64 bg-gradient-to-br from-green-800/30 to-gray-800"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2">
+                            Dzīvā Sūnu Siena<br>
+                            <span class="text-sm text-gray-400">Living Moss Wall</span>
+                        </h3>
+                        <p class="text-gray-300 text-sm">
+                            Korporatīvā biroja galvenā siena ar dzīvo sūnu instalāciju.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-black rounded-lg overflow-hidden hover:scale-105 transition-transform">
+                    <div class="h-64 bg-gradient-to-br from-amber-800/30 to-gray-800"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2">
+                            Biofiliskā Guļamistaba<br>
+                            <span class="text-sm text-gray-400">Biophilic Bedroom</span>
+                        </h3>
+                        <p class="text-gray-300 text-sm">
+                            Mierīga guļamistaba ar dabīgiem materiāliem un augu elementiem.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-black rounded-lg overflow-hidden hover:scale-105 transition-transform">
+                    <div class="h-64 bg-gradient-to-br from-[#D4AF37]/40 to-gray-800"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#D4AF37] mb-2">
+                            Ekskluzīvs Galds<br>
+                            <span class="text-sm text-gray-400">Exclusive Table</span>
+                        </h3>
+                        <p class="text-gray-300 text-sm">
+                            Konferenču galds no 3000 gadus vecā fosīlijas ozola.
+                        </p>
+                    </div>
+                </div>
+                <div (Since you mapped full_html
