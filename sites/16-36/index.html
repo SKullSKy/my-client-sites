@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Experience | Luksusa Pieredze</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
+  
+  * { scroll-behavior: smooth; }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  .playfair { font-family: 'Playfair Display', serif; }
+
+  .glass-nav {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .glass-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .glass-card-light {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.6);
+  }
+
+  .hero-gradient {
+    background: radial-gradient(ellipse at 20% 50%, rgba(212,175,55,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%),
+                linear-gradient(135deg, #0a0a0a 0%, #1a1208 50%, #0a0a0a 100%);
+  }
+
+  .gold { color: #D4AF37; }
+  .gold-bg { background: #D4AF37; }
+  .gold-border { border-color: #D4AF37; }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #F5E6A3 50%, #D4AF37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bento-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.2);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .bento-card:hover {
+    background: rgba(212,175,55,0.08);
+    border-color: rgba(212,175,55,0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 60px rgba(212,175,55,0.1);
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gallery-item img {
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.08);
+  }
+
+  .gallery-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #D4AF37;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after { width: 100%; }
+  .nav-link:hover { color: #D4AF37; }
+
+  .btn-gold {
+    background: linear-gradient(135deg, #D4AF37 0%, #F5E6A3 50%, #D4AF37 100%);
+    background-size: 200% 200%;
+    transition: all 0.4s ease;
+    color: #0a0a0a;
+  }
+
+  .btn-gold:hover {
+    background-position: right center;
+    box-shadow: 0 8px 32px rgba(212,175,55,0.4);
+    transform: translateY(-2px);
+  }
+
+  .input-field {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: #D4AF37;
+    background: rgba(212,175,55,0.05);
+    box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
+  }
+
+  .input-field::placeholder { color: rgba(255,255,255,0.4); }
+
+  .floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 8s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+  }
+
+  .line-accent {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #D4AF37, transparent);
+  }
+
+  .counter-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, #D4AF37, #F5E6A3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in { animation: fadeInUp 0.8s ease forwards; }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent);
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #0a0a0a; }
+  ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 2px; }
+
+  .map-placeholder {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    border: 1px solid rgba(212,175,55,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .map-grid {
+    background-image: 
+      linear-gradient(rgba(212,175,55,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,55,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .pulse-dot {
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+  }
+
+  .hero-text-reveal {
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- FIXED GLASS PILL NAV -->
+<!-- ============================================ -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-auto">
+  <div class="glass-nav rounded-full px-8 py-4 flex items-center gap-8">
+    <div class="flex items-center gap-2">
+      <div class="w-6 h-6 gold-bg rounded-full flex items-center justify-center">
+        <div class="w-2 h-2 bg-black rounded-full"></div>
+      </div>
+      <span class="playfair font-bold text-white text-sm tracking-widest uppercase">Luxe</span>
+    </div>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="#about" class="nav-link text-white/70 text-xs font-medium tracking-wider uppercase">Par mums / About</a>
+      <a href="#services" class="nav-link text-white/70 text-xs font-medium tracking-wider uppercase">Pakalpojumi / Services</a>
+      <a href="#gallery" class="nav-link text-white/70 text-xs font-medium tracking-wider uppercase">Galerija / Gallery</a>
+      <a href="#contact" class="nav-link text-white/70 text-xs font-medium tracking-wider uppercase">Kontakti / Contact</a>
+    </div>
+    <a href="#contact" class="btn-gold rounded-full px-5 py-2 text-xs font-semibold tracking-wider uppercase">
+      Sākt / Begin
+    </a>
+  </div>
+</nav>
+
+<!-- ============================================ -->
+<!-- HERO SECTION -->
+<!-- ============================================ -->
+<section id="hero" class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-24">
+  
+  <!-- Floating Orbs -->
+  <div class="floating-orb w-96 h-96 bg-yellow-500/10 top-20 -left-20" style="animation-delay: 0s;"></div>
+  <div class="floating-orb w-64 h-64 bg-yellow-300/5 bottom-20 right-10" style="animation-delay: 3s;"></div>
+  <div class="floating-orb w-48 h-48 bg-white/5 top-1/2 right-1/4" style="animation-delay: 5s;"></div>
+
+  <!-- Grid Pattern -->
+  <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 80px 80px;"></div>
+
+  <div class="max-w-7xl mx-auto px-6 text-center relative z-10 py-32">
+    
+    <!-- Eyebrow -->
+    <div class="flex items-center justify-center gap-4 mb-8 fade-in">
+      <div class="line-accent"></div>
+      <span class="gold text-xs font-semibold tracking-[0.4em] uppercase">Luksusa Pieredze · Luxury Experience</span>
+      <div class="line-accent" style="background: linear-gradient(270deg, #D4AF37, transparent);"></div>
+    </div>
+
+    <!-- Main Heading -->
+    <div class="hero-text-reveal mb-6">
+      <h1 class="playfair font-black leading-none text-white" style="font-size: clamp(3.5rem, 10vw, 9rem);">
+        Izjūti<br>
+        <span class="text-gradient">Izcilību</span>
+      </h1>
+    </div>
+
+    <!-- English Sub-heading -->
+    <div class="hero-text-reveal mb-10">
+      <h2 class="playfair font-light text-white/50 tracking-widest" style="font-size: clamp(1.5rem, 4vw, 3.5rem);">
+        Experience Excellence
+      </h2>
+    </div>
+
+    <!-- Description -->
+    <p class="text-white/60 text-lg max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+      Mēs radām pieredzes, kas pārsniedz gaidīto — kur katrs moments kļūst par atmiņu uz mūžu.<br>
+      <span class="text-white/40 text-base">We craft experiences that exceed expectations — where every moment becomes a memory for life.</span>
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+      <a href="#about" class="btn-gold rounded-full px-10 py-4 font-semibold tracking-wider uppercase text-sm">
+        Uzzināt Vairāk · Discover More
+      </a>
+      <a href="#gallery" class="border border-white/20 rounded-full px-10 py-4 text-white/70 font-medium tracking-wider uppercase text-sm hover:border-yellow-400/50 hover:text-white transition-all duration-300">
+        Skatīt Galeriju · View Gallery
+      </a>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+      <div class="text-center">
+        <div class="counter-num">15+</div>
+        <p class="text-white/40 text-xs tracking-widest uppercase mt-1">Gadi / Years</p>
+      </div>
+      <div class="text-center border-x border-white/10">
+        <div class="counter-num">2K+</div>
+        <p class="text-white/40 text-xs tracking-widest uppercase mt-1">Klienti / Clients</p>
+      </div>
+      <div class="text-center">
+        <div class="counter-num">98%</div>
+        <p class="text-white/40 text-xs tracking-widest uppercase mt-1">Apmierināti / Satisfied</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+    <span class="text-white/30 text-xs tracking-widest uppercase">Ritināt / Scroll</span>
+    <div class="w-px h-12 bg-gradient-to-b from-yellow-400/50 to-transparent animate-pulse"></div>
+  </div>
+
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ============================================ -->
+<!-- ABOUT US SECTION -->
+<!-- ============================================ -->
+<section id="about" class="py-48 relative overflow-hidden" style="background: linear-gradient(180deg, #0a0a (Since you mapped full_html
