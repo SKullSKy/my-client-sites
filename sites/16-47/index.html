@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="lv" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #0a0a0a; color: white; font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .glass { backdrop-filter: blur(20px); background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gold { color: #D4AF37; }
+        .gold-bg { background-color: #D4AF37; }
+        .gold-border { border-color: #D4AF37; }
+        .hover-gold:hover { color: #D4AF37; transition: all 0.3s ease; }
+        .bento-card { background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%); }
+        .cinematic-overlay { background: linear-gradient(0deg, rgba(10, 10, 10, 0.9) 0%, transparent 50%); }
+    </style>
+</head>
+<body>
+
+<!-- Fixed Navigation -->
+<nav class="fixed top-0 w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <div class="serif text-2xl font-bold gold">NATURA LUXE / ПРИРОДА ЛЮКС</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="hover-gold transition-all duration-300">Sākums / Home</a>
+                <a href="#about" class="hover-gold transition-all duration-300">Par mums / About</a>
+                <a href="#services" class="hover-gold transition-all duration-300">Pakalpojumi / Services</a>
+                <a href="#portfolio" class="hover-gold transition-all duration-300">Darbi / Portfolio</a>
+                <a href="#contact" class="hover-gold transition-all duration-300">Kontakti / Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+    <div class="absolute inset-0 opacity-20">
+        <div class="w-full h-full bg-gradient-to-r from-transparent via-yellow-900 to-transparent animate-pulse"></div>
+    </div>
+    <div class="relative z-10 text-center max-w-6xl mx-auto px-6">
+        <h1 class="serif text-9xl font-bold mb-8 leading-tight">
+            <span class="gold">FOSSILIZED</span><br>
+            <span class="text-white">ELEGANCE</span><br>
+            <span class="text-gray-300">ОКАМЕНЕЛАЯ ЭЛЕГАНТНОСТЬ</span>
+        </h1>
+        <p class="text-2xl mb-12 max-w-4xl mx-auto leading-relaxed">
+            Transformējam jūsu telpu ar 50 miljonu gadu vecu fosilo ozolu un dzīvo sūnu sienu sistēmām. 
+            Biofīliskais dizains, kas pārveido jūsu māju par dabas svētnīcu.<br>
+            <span class="gold">Transform your space with 50-million-year-old fossilized oak and living moss wall systems.</span>
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="#services" class="gold-bg text-black px-12 py-4 text-xl font-bold hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105">
+                EKSKLUZĪVIE RISINĀJUMI / EXCLUSIVE SOLUTIONS
+            </a>
+            <a href="#portfolio" class="border-2 gold-border px-12 py-4 text-xl font-bold hover:bg-yellow-900 hover:bg-opacity-20 transition-all duration-300">
+                APSKATĪT DARBUS / VIEW WORKS
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-32 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="serif text-6xl font-bold mb-8 gold">Mūsu Misija / Our Mission</h2>
+                <p class="text-xl mb-6 leading-relaxed">
+                    Mēs neradām tikai interjeru - mēs radām dzīvu ekosistēmu jūsu mājās. Katrs fosilo ozolu elements ir unikāls mākslas darbs, 
+                    kas veidojies miljoniem gadu. Mūsu dzīvās sūnu sienas ne tikai attīra gaisu, bet rada dabisko mieru un harmoniju.
+                </p>
+                <p class="text-xl mb-8 leading-relaxed gold">
+                    We don't just create interiors - we create living ecosystems in your home. Each fossilized oak element is a unique work of art, 
+                    formed over millions of years. Our living moss walls not only purify the air but create natural peace and harmony.
+                </p>
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="serif text-4xl font-bold gold mb-2">50M+</div>
+                        <div class="text-sm">Gadu vecs ozols / Year-old oak</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="serif text-4xl font-bold gold mb-2">99%</div>
+                        <div class="text-sm">Gaisa attīrīšana / Air purification</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="serif text-4xl font-bold gold mb-2">100%</div>
+                        <div class="text-sm">Unikāli projekti / Unique projects</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="glass p-8 rounded-2xl">
+                    <div class="h-96 bg-gradient-to-br from-yellow-900 to-green-900 rounded-xl flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="serif text-3xl font-bold gold mb-4">FOSSILIZED OAK</div>
+                            <div class="text-lg">50 Million Years in the Making</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section - Bento Grid -->
+<section id="services" class="py-32">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="serif text-6xl font-bold text-center mb-16 gold">Ekskluzīvie Pakalpojumi / Exclusive Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Service 1 - Large Card -->
+            <div class="lg:col-span-2 lg:row-span-2 bento-card p-8 rounded-2xl border border-yellow-900 hover:border-yellow-600 transition-all duration-300 group">
+                <div class="h-full flex flex-col justify-between">
+                    <div>
+                        <h3 class="serif text-3xl font-bold mb-4 gold group-hover:text-yellow-400 transition-colors">
+                            Fosilo Ozolu Sienas / Fossilized Oak Walls
+                        </h3>
+                        <p class="text-lg mb-6 leading-relaxed">
+                            Ekskluzīvas fosilo ozolu sienas, kas radītas no 50 miljonu gadu veciem kokiem. 
+                            Katrs elements ir unikāls, ar dabiskām tekstūrām un krāsu pārejām.
+                        </p>
+                        <p class="gold text-base">
+                            Exclusive fossilized oak walls created from 50-million-year-old trees. 
+                            Each element is unique with natural textures and color transitions.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <div class="text-2xl font-bold gold">No €15,000</div>
+                        <div class="text-sm text-gray-400">Par kvadrātmetru / Per square meter</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bento-card p-6 rounded-2xl border border-yellow-900 hover:border-yellow-600 transition-all duration-300 group">
+                <h3 class="serif text-2xl font-bold mb-4 gold group-hover:text-yellow-400 transition-colors">
+                    Dzīvās Sūnu Sienas / Living Moss Walls
+                </h3>
+                <p class="text-sm mb-4">
+                    Biofiltrācijas sistēmas ar dzīviem sūniem, kas attīra gaisu un rada dabisko mieru.
+                </p>
+                <p class="gold text-xs mb-4">
+                    Biofiltration systems with living moss that purify air and create natural tranquility.
+                </p>
+                <div class="text-xl font-bold gold">No €8,000</div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bento-card p-6 rounded-2xl border border-yellow-900 hover:border-yellow-600 transition-all duration-300 group">
+                <h3 class="serif text-2xl font-bold mb-4 gold group-hover:text-yellow-400 transition-colors">
+                    Biofīliskais Dizains / Biophilic Design
+                </h3>
+                <p class="text-sm mb-4">
+                    Pilnīga telpu transformācija, integrējot dabas elementus arhitektūrā.
+                </p>
+                <p class="gold text-xs mb-4">
+                    Complete space transformation integrating natural elements into architecture.
+                </p>
+                <div class="text-xl font-bold gold">No €25,000</div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="lg:col-span-2 bento-card p-6 rounded-2xl border border-yellow-900 hover:border-yellow-600 transition-all duration-300 group">
+                <h3 class="serif text-2xl font-bold mb-4 gold group-hover:text-yellow-400 transition-colors">
+                    Ekskluzīvā Konsultācija / Exclusive Consultation
+                </h3>
+                <p class="text-base mb-4">
+                    Personalizēta pieeja katram projektam. Mūsu eksperti izveidos unikālu konceptu, 
+                    kas atbilst jūsu vīzijai un dzīvesveidam.
+                </p>
+                <p class="gold text-sm">
+                    Personalized approach to each project. Our experts will create a unique concept 
+                    that matches your vision and lifestyle.
+                </p>
+                <div class="text-xl font-bold gold mt-4">€2,500 / Konsultācija</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section - Cinematic Gallery -->
+<section id="portfolio" class="py-32">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="serif text-6xl font-bold text-center mb-16 gold">Mūsu Darbi / Our Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Portfolio Item 1 -->
+            <div class="relative group overflow-hidden rounded-2xl h-96">
+                <div class="absolute inset-0 bg-gradient-to-br from-yellow-900 to-green-900"></div>
+                <div class="absolute inset-0 cinematic-overlay opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                    <h3 class="serif text-2xl font-bold mb-2 gold">Rīgas Penthouse</h3>
+                    <p class="text-sm">Fosilo ozolu bibliotēka ar integrētām sūnu sienām</p>
+                    <p class="gold text-xs">Fossilized oak library with integrated moss walls</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="relative group overflow-hidden rounded-2xl h-96">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-900 to-yellow-900"></div>
+                <div class="absolute inset-0 cinematic-overlay opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                    <h3 class="serif text-2xl font-bold mb-2 gold">Jūrmalas Villa</h3>
+                    <p class="text-sm">Dzīvā sūnu siena ar automātisko apūdeņošanas sistēmu</p>
+                    <p class="gold text-xs">Living moss wall with automatic irrigation system</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="relative group overflow-hidden rounded-2xl h-96">
+                <div class="absolute inset-0 bg-gradient-to-br from-yellow-800 to-green-800"></div>
+                <div class="absolute inset-0 cinematic-overlay opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                    <h3 class="serif text-2xl font-bold mb-2 gold">Siguldas Rezidence</h3>
+                    <p class="text-sm"> (Since you mapped full_html
