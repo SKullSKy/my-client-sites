@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature Interiors</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --dark-green: #1B4332;
+    }
+    * { scroll-behavior: smooth; }
+    body {
+      background: #0a0a0a;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+    .gold { color: #D4AF37; }
+    .glass-nav {
+      background: rgba(10, 10, 10, 0.72);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+    .glass-card-hover {
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .glass-card-hover:hover {
+      background: rgba(212, 175, 55, 0.07);
+      border-color: rgba(212, 175, 55, 0.45);
+      transform: translateY(-4px);
+      box-shadow: 0 32px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(212, 175, 55, 0.2);
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a4d3a 35%, #2d5016 70%, #0f0f0f 100%);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #D4AF37 0%, #f5d97e 40%, #b8860b 80%, #D4AF37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gold-line {
+      background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+      height: 1px;
+    }
+    .lang-switcher span { cursor: pointer; transition: color 0.3s; }
+    .lang-switcher span.active { color: #D4AF37; }
+    .lang-switcher span:not(.active) { color: rgba(255,255,255,0.45); }
+    .noise-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.4;
+    }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+    .orb-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(27,67,50,0.55) 0%, transparent 70%);
+      top: -100px; left: -100px;
+    }
+    .orb-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(45,80,22,0.45) 0%, transparent 70%);
+      top: 200px; right: -150px;
+    }
+    .orb-3 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);
+      bottom: 100px; left: 50%;
+      transform: translateX(-50%);
+    }
+    .bento-tall { grid-row: span 2; }
+    .number-badge {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      font-weight: 300;
+      line-height: 1;
+      background: linear-gradient(135deg, rgba(212,175,55,0.25) 0%, rgba(212,175,55,0.05) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .marquee-wrapper { overflow: hidden; white-space: nowrap; }
+    .marquee-inner {
+      display: inline-block;
+      animation: marquee 28s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .btn-gold {
+      background: linear-gradient(135deg, #D4AF37 0%, #b8860b 100%);
+      color: #0a0a0a;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+      box-shadow: 0 0 40px rgba(212,175,55,0.45), 0 8px 32px rgba(0,0,0,0.5);
+      transform: translateY(-2px);
+    }
+    .btn-outline-gold {
+      border: 1px solid rgba(212,175,55,0.6);
+      color: #D4AF37;
+      letter-spacing: 0.08em;
+      transition: all 0.3s ease;
+    }
+    .btn-outline-gold:hover {
+      background: rgba(212,175,55,0.1);
+      border-color: #D4AF37;
+      box-shadow: 0 0 30px rgba(212,175,55,0.2);
+    }
+    .icon-circle {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(212,175,55,0.35);
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(212,175,55,0.07);
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,175,55,0.12);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+    }
+    .stat-card:hover { border-color: rgba(212,175,55,0.3); background: rgba(212,175,55,0.05); }
+    .section-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <!-- FIXED GLASS NAV -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full border border-[#D4AF37]/50 flex items-center justify-center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C8 6 4 9 4 14a8 8 0 0016 0c0-5-4-8-8-12z" fill="#D4AF37" opacity="0.9"/>
+            <path d="M12 8v14M9 16l3-3 3 3" stroke="#D4AF37" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+        <span class
